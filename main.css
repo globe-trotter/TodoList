@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    color:  #008F11;
+    background-color: black;
+    font-family: "Open Sans",sans-serif;
+    min-height: 100vh;
+}
+header {
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
+header, form{
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form input, form button {
+    padding: 0.5rem;
+    border: none;
+    background: white;
+    font-size: 1rem;
+
+}
+form button{
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+form button:hover{
+    background-color: #008F11;
+    color: white;
+}
