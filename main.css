@@ -29,8 +29,45 @@ form input, form button {
 form button{
     transition: all 0.5s ease;
     cursor: pointer;
+    background-color: black;
+    color: white;
 }
 form button:hover{
     background-color: #008F11;
     color: white;
+}
+
+.todo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.todo-list{
+    list-style: none;
+    min-width: 30%;
+}
+.todo{
+    margin: 0.5rem;
+    background: white;
+    color: black;
+    display: flex;
+    font-size: 1rem;
+    justify-content: center;
+    align-items:center;
+}
+.todo li{
+    flex:1;
+
+}
+.trash-btn,.complete-btn{
+    background:black ;
+    color: white;
+    border: none;
+    padding: 1rem;
+    font-size: 0.75rem;
+    cursor: pointer;
+    margin: 1px;
+}
+.complete-btn{
+    background:#008F11 ;
 }
