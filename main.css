@@ -124,5 +124,4 @@ select{
 }
 .select:hover::after{
     background: black;
-    
 }
