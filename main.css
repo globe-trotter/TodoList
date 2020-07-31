@@ -29,11 +29,11 @@ form input, form button {
 form button{
     transition: all 0.5s ease;
     cursor: pointer;
-    background-color: black;
+    background-color: #008F11;
     color: white;
 }
 form button:hover{
-    background-color: #008F11;
+    background-color: black;
     color: white;
 }
 
@@ -54,11 +54,16 @@ form button:hover{
     font-size: 1rem;
     justify-content: center;
     align-items:center;
+    transition: 0.5s ease;
 }
 .todo li{
     flex:1;
 
 }
+.fa-trash,.fa-check{
+    pointer-events: none;
+}
+
 .trash-btn,.complete-btn{
     background:black ;
     color: white;
@@ -70,4 +75,31 @@ form button:hover{
 }
 .complete-btn{
     background:#008F11 ;
+}
+.todo-item{
+    font-weight: 600;
+    padding: 0 0.5rem;
+}
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+.fall{
+    transform: translateY(8rem) rotateZ(360deg);
+    opacity: 0;
+}
+select{
+    appearance: none;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    padding: 1rem;
+}
+.select{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
 }
