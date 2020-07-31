@@ -95,27 +95,31 @@ select{
     outline: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    cursor: pointer;
-    padding: 0.55rem;
+    
     color: #008F11;
-    width:10rem;
 
 }
 .select{
     margin: 1rem;
     position: relative;
     overflow: hidden;
+    
+}
+select{
+    color: #008F11;
+    width: 10rem;
+    cursor: pointer;
+    padding: 0.5rem;
 }
 .select::after{
     content: "\25BC";
-    position: relative;
-    align-self: center;
+    position: absolute;
     color: white;
     background: #008F11;
     transition: all 0.5s ease;
-    top:0;
+    top: 0;
     right: 0;
-    padding: 1rem;
+    padding: 0.45rem;
     pointer-events: none;
 }
 .select:hover::after{

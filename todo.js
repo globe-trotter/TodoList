@@ -40,6 +40,7 @@ function deleteCheck(e){
     const item=e.target;
     if(item.classList[0]=='trash-btn'){
         item.parentElement.classList.add('fall');
+        removeLocalTodos(item.parentElement);
         item.parentElement.addEventListener('transitionend',function(){
             item.parentElement.remove();
         });
@@ -118,4 +119,17 @@ function getTodos(){
 
         todoList.appendChild(todoDiv);
     });
+}
+
+function removeLocalTodos(todo){
+    let todos;
+    if(localStorage.getItem("todos")===null){
+        todos=[];
+    }
+    else{
+        todos=JSON.parse(localStorage.getItem("todos"));
+    }
+    const index= todos.indexOf(todo.children[0].innerText);
+    todos.splice(index,1);
+    localStorage.setItem('todos',JSON.stringify(todos));
 }
